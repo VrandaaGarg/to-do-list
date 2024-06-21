@@ -1,0 +1,121 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right,#81689D,#1F2544);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    border: 2px solid white;
+    padding: 3vh 6vh 3vh 6vh;
+    border-radius: 3vh;
+    position: relative;
+    overflow: hidden;
+    line-height: 7vh;
+    margin: 3vh;
+    bottom: 15vh;
+    box-shadow: #1F2544 5px 5px 7px 7px;
+}
+h1{
+    text-align: center;
+    font-size: 7vh;
+    margin: 3vh;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:url(./images/purple\ back.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3vh;
+    clip-path: url(#rounded-corner-clip);
+    opacity: 0.4; /* Adjust the opacity here */
+    z-index: -1; /* Ensures the overlay is behind the content */
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2vh;
+    margin: 3vh 0 3vh 0;
+}
+.note{
+    border: transparent;
+    outline: none;
+    padding: 1vh;
+    border-radius: 4vh;
+}
+
+.note:focus{
+    outline: none;
+    border: transparent;
+}
+
+button{
+    border-radius: 2vh;
+    padding: 1vh;
+    border: transparent;
+    background-color:#1F2544;
+    width: 15vh;
+    color: white;
+}
+
+button:hover{
+    background-color: #474F7A;
+    cursor: pointer;
+    outline:2px solid black;
+}
+
+li {
+   list-style: none;
+   padding: 0 18px 6px 30px; 
+   position: relative;
+   font-size: 17px;
+   cursor: pointer;
+}
+
+
+li::before{
+    content: '';
+    position: absolute;
+    height: 4vh;
+    width: 4vh;
+    background-image: url(./images/icons8-unchecked-checkbox-100.png);
+    background-size: cover;
+    background-position: center;
+    top: 6px;
+    left: 0px;
+}
+
+li.checked{
+    text-decoration: line-through;
+    color: #3d4152;
+}
+
+li.checked::before{
+    background-image: url(./images/icons8-checked-96.png);
+    background-color:#474F7A;
+    border-radius: 0.5vh;
+}
+ 
+li span{
+    position: absolute;
+    left: 200px;
+    height: 14px;
+    width: 14px;
+    font-size: 3.8vh;
+}
+
